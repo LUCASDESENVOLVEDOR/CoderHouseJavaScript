@@ -1,0 +1,269 @@
+<html>
+
+<head>
+    <script>
+
+        //ESTRUTURA IF (SE)
+        // if (true) {
+        //     //bloco de codigo a ser executado.
+        //     console.log("Verá essa mensagem")
+        // }
+
+        // //exemplo de condicionais
+
+        // // Um sinal de igual representa atribuicao.
+        // var numero = 5;
+
+        // //== comparação.
+        // if (numero == 5) {
+        //     console.log("Verá esta mensagem de comparação.")
+        // }
+
+        // if (numero == 6) {
+        //     console.log("Verá esta mensagem de comparação com 6.")
+        // }
+
+
+        // //IF - ELSE (SE - SENAO)
+
+        // var cor = "Vermelho"
+        // //Comparar se cor é igual a Vermelho
+
+        // if (cor == "Vermelho") {
+        //     console.log("A cor é vermelho.")
+        // }
+        // else {
+        //     //quando nao for vermelho
+        //     console.log("a cor NÃO é vermelho.")
+        // }
+
+        // var NomeUsuario = prompt("Insira seu nome.")
+
+        // if (NomeUsuario == "") {
+        //     alert("O nome do usuário não foi inserido")
+        // }
+        // else {
+        //     alert("Nome de usuário inserido: " + NomeUsuario)
+        // }
+
+        // //Condições aninhadas if.. else if
+
+        // var combustivel = ""
+
+        // if (combustivel == "GNV") {
+        //     console.log("O carro é movido à Gás.")
+        // }
+        // else if (combustivel == "Gasolina") {
+        //     console.log("O carro é movido à gasolina.")
+        // }
+        // else if (combustivel == "Álcool") {
+        //     console.log("O carro é movido à àlcool.")
+        // }
+        // else {
+        //     alert("O carro não funciona")
+        // }
+
+        // //Variáveis Booleanas.
+
+        // var idade = 10
+        // var possui10anos = (idade == 10)
+
+        // alert(possui10anos) //exibe o valor de possui10anos TRUE OU FALSE.
+
+        // if (possui10anos) {
+        //     alert("Essa pessoa possui 10 anos de idade.")
+        // }
+
+        // //Atividade da sala 
+        // var numeroUsuario = prompt("Informe um número de 1 a 5")
+
+        // if (numeroUsuario == "1") {
+        //     alert("O número digitado foi um")
+        // }
+
+        // else if (numeroUsuario == "2") {
+        //     alert("O número digitado foi dois")
+        // }
+
+        // else if (numeroUsuario == "3") {
+        //     alert("O número digitado foi três")
+        // }
+        // else if (numeroUsuario == "4") {
+        //     alert("O número digitado foi quatro")
+        // }
+        // else if (numeroUsuario == "5") {
+        //     alert("O número digitado foi cinco")
+        // }
+        // else {
+        //     alert("O número informado está incorreto")
+        // }
+
+        // //Operadores Relacionais
+
+        // var preco = 50.5
+
+        // if (preco != 0) //preco é diferente de zero.
+        // {
+        //     alert("O preço é diferente de zero.")
+        // }
+        // else if (preco >= 70) //preco é maior ou igual a 70.
+        // {
+        //     alert("O preço é diferente de zero.")
+        // }
+        // else {
+        //     alert("O preço é menor que 70.")
+        // }
+
+
+        // //Execercicio 2 em sala
+
+        // var numero = prompt("informe um numero entre 1 e 100")
+
+
+        // if (numero <= 10) {
+        //     console.log("numero inserido: " + numero)
+        //     alert("Invervalo entre  1 a 10")
+        // }
+        // else if (numero <= 20) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  11 a 20")
+        // }
+        // else if (numero <= 30) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  21 a 30")
+        // }
+        // else if (numero <= 40) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  31 a 40")
+        // }
+        // else if (numero <= 50) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  41 a 50")
+        // }
+        // else if (numero <= 60) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  51 a 60")
+        // }
+        // else if (numero <= 70) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  61 a 70")
+        // }
+        // else if (numero <= 80) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  71 a 80")
+        // }
+        // else if (numero <= 90) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  81 a 90")
+        // }
+
+        // else if (numero <= 100) {
+        //     console.log("numero inserido" + numero)
+        //     alert("Invervalo entre  91 a 100")
+        // }
+        // else {
+        //     alert("Número informado inválido")
+        // }
+     
+        //Condições com && (and)
+      
+        var nome  = prompt("Inserir nome")
+        var sobrenome  = prompt("Inserir o sobrenome")
+
+        //criar uma validacao para exibir apenas se o usuario informar
+        //nome e senha.
+
+        //&& Todas as condicoes devem ser TRUE
+
+        if(  (nome != "")  && (sobrenome != "")  ){
+               alert("Nome: " + nome + "\nSobrenome: " + sobrenome)  
+         }
+         else{
+            alert("Erro ao inserir nome e sobrenome")
+         }
+
+
+        //Condições com ||
+        //Espera que apenas 1 condicao seja TRUE.
+
+        if( nome == "LUCAS" || nome == "Lucas" || nome == "lucas"){
+            alert("O nome inserido é Lucas")
+        }
+        else{
+            alert("O nome inserido NÃO é Lucas")
+        }
+
+        //Condição com !(NOT)
+
+        var eVazio = (nome == "") //true ou false.
+
+       //! NOT = negativa a condicao. 
+
+       //a variavel  eVazio é FALSE? 
+        if(!eVazio){
+            alert("Nome: " + nome)
+        }
+        else{
+            alert("Nome é vazio")
+        }
+   
+       // AND e OR   - &&  ||
+
+       //se o nome é diferente de vazio. 
+       // e
+       // o nome seja Lucas por alguma das 3 formas.
+    if( nome != "" && (nome == "Lucas" || nome == "LUCAS" || nome == "lucas") ){        
+         
+        alert("Olá, Lucas")
+    }
+    else{
+        alert("Erro: Inserir nome")
+    }
+
+     //Se o é diferente de vazio e nome igual a Lucas
+     // ou
+     //Nome por alguma das 2 formas.
+    if( (nome != "" && nome == "Lucas") || (nome == "LUCAS" || nome == "lucas") ){        
+         
+         alert("Olá, Lucas")
+     }
+     else{
+         alert("Erro: Inserir nome")
+     }
+
+     //Pratica  em sala
+
+     // Solicite uma letra ao usuário
+var letra = prompt("Digite uma letra:");
+
+// Verifique se o usuário não deixou o campo vazio
+if(letra == ""){
+   
+      alert("O valor informado pelo usuario é vazio")
+}
+else if (letra == "a" || letra  == "e" || letra == "i" || letra == "o" || letra == "u" ||
+         letra == "A" || letra  == "E" || letra == "I" || letra == "O" || letra == "U"){
+
+            alert("A letra informada é uma vogal")
+
+}
+else{
+
+     alert("A letra informada não é uma vogal")
+}
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
