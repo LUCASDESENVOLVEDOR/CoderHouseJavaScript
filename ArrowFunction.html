@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+      <script>
+       //Calculadora de preço.
+
+       var somar = (numero_1,numero_2) => numero_1 + numero_2
+       var subtrair = (a,b) => a -b
+       var calcularICMS = (x) => x * 0.21
+
+        var precoProduto = 500
+        var desconto = 50
+
+        //Calculo o PrecoProduto + ICMS - Desconto
+        var icms = calcularICMS(precoProduto)
+        var soma = somar(precoProduto,icms)
+        var novoProduto = subtrair(soma,desconto)
+
+        console.log(novoProduto)
+
+
+       //Refaça o exemplo da calculadora usando apenas arrow functions.
+       
+       //function calculadora(primeiroNumero,segundoNumero, operacao){
+
+       var calculadora = (primeiroNumero,segundoNumero, operacao) =>
+        {
+
+            if(operacao == "+"){
+                return primeiroNumero + segundoNumero
+            }
+
+            else if(operacao == "-"){
+                return primeiroNumero - segundoNumero
+            }
+
+            else if(operacao == "*"){
+                return primeiroNumero * segundoNumero
+            }
+
+            else if(operacao == "/"){
+                return primeiroNumero / segundoNumero
+            }
+            else{
+                return 0;
+            }
+            }
+
+
+//var resultadoCalculadora = calculadora(30,10,"-")
+
+// console.log(resultadoCalculadora)
+
+console.log(calculadora(30,10,"-"))
+console.log(calculadora(30,10,"+"))
+console.log(calculadora(30,10,"/"))
+console.log(calculadora(30,10,"*"))
+
+
+
+
+
+
+      </script>
+
+
+</head>
+
+
+</html>

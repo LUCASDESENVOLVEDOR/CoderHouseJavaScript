@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script>
+        
+        //Solicite um numero atravez do prompr.
+        //Verificar se esta entre 10 e 50
+        //Em caso positivo, mostre uma mensagem indicativa em um alert.
+        //Em caso negativo, mostra uma msg inficativa em um console.
+
+        //solicite um numero ao usuario
+        var numero = prompt("Digite um numero")
+         
+        //Converta o valor inserido para o numero inteiro.
+        numero = parseInt(numero)
+        
+
+        if(numero >= 10 && numero <= 50){
+            alert("O numero está entre 10 e 50")
+        }
+        else{
+           console.log("O número está fora do intervalo de 10 e 50")
+        }
+           
+        //Funcão que realiza a subtracao do maior pelo menor e exibe
+        //o resultado no console.
+
+         function sustracaoMaiorMenor(numero1, numero2){
+
+              if(numero1 > numero2){
+                var resultado = (numero1 - numero2)
+                console.log("A subtração de " + numero1  + " - " + numero2 +
+                "é igual a : "+ resultado)
+              }
+              else if (numero2 > numero1){
+                var resultado = (numero2 - numero1)
+                console.log("A subtração de " + numero2  + " - " + numero1+
+                "é igual a : "+ resultado)
+              }
+              else{
+                console.log("Os números iguais, resultado 0")
+              }
+         }
+
+         var num1 = parseInt(prompt("Digite o primeiro número"))
+         var num2 = parseInt(prompt("Digite o segundo número"))
+
+         sustracaoMaiorMenor(num1,num2)
+        
+
+
+
+        
+    </script>
+
+</head>
+
+</html>
