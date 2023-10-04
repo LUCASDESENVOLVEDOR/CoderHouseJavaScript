@@ -1,0 +1,104 @@
+<html>
+
+<head>
+
+    <script>
+    //1. (Par ou ímpar) Crie uma funcionalidade que recebe um número
+    // e verifica se ele é par ou ímpar
+    
+    function parImpar(numero){
+       if(numero % 2 == 0)
+          console.log("Numero par")
+       else
+          console.log("Número impar")
+    }
+
+    parImpar(4)
+
+
+    console.log("Segundo.")
+    //2.  (Estações do ano) Faça um sistema que receba um mês e 
+    //informe a qual estação esse mês pertence.
+
+     function estacaoDoAno(numeroMes){
+       if(numeroMes <  1 || numeroMes >12)
+            console.log("Mês inválido")
+
+       if(mes >= 3 && mes <= 5)
+          console.log("Primavera")
+       else if(mes >=6 && mes <= 8)
+          console.log("Verão")
+       else if(mes >=9 && mes <= 11)
+          console.log("Outono")
+        else
+          console.log("Inverno")
+     }
+
+     estacaoDoAno(4)
+
+
+     //3 - (Temperatura) Escreva uma função em JavaScript que
+     // realize a conversão de uma temperatura fornecida em graus Fahrenheit (F) 
+     //para Celsius (C).
+
+      function FahrenheitParaCelsius(fahrenheit){
+        let celsius = (fahrenheit-32) * 5/9
+        console.log(celsius)
+      }
+
+      FahrenheitParaCelsius(68) //20 graus celcius
+
+     //4-(Número primo) Crie uma funcionalidade que solicita para que o usuário 
+     //informe um número até que o número informado seja primo.
+    
+     function ehPrimo(numero) {
+
+           if(numero <=1){
+               return false
+           }
+
+          for(let i =2; i<numero;i++){
+             if(numero % i == 0){
+                return false
+             }
+          }
+
+          return true
+     }
+
+     let numero;
+
+     do{
+        numero = parseInt(prompt("Digite um numero"))
+     }
+     while(!ehPrimo(numero))
+
+     console.log(numero + " é primo.")
+
+
+     //!NOT 
+
+    //5-(Somatório) Faça um sistema que receba um número e calcule seu somatório 
+    //(somar todos os valores entre 1 e o número escolhido).
+
+     function somatorio(numero){
+
+        let resultado  = 0;
+
+        for(let i = 1; i <=numero; i++){
+           // resultado = resultado+i
+           resultado += i
+        }
+
+        return resultado
+
+     }
+     somatorio(5) //15
+     
+
+    </script>
+
+</head>
+
+
+</html>

@@ -1,0 +1,100 @@
+<html>
+
+<head>
+ 
+      <script>
+         //Algoritmo que solicita uma entrada e se 
+         //encerra quando nao for um numero.
+         let numero = 0
+
+         do{
+            numero = prompt("Insira um número")
+            console.log(numero)
+         }while(parseInt(numero))
+
+
+         //switch
+
+        let  entrada = prompt("Inserir um nome")
+
+        //Repetir ate que "sair" seja inserido.
+   
+        while(entrada != "sair"){
+
+            switch(entrada){
+            case "Lucas":
+                alert("Olá Lucas")
+                break;
+            case "Ana":
+                  alert("Olá Ana")
+                  break;
+            default:
+                alert("Quem é você?")
+                 break;
+            }
+           entrada = prompt("Inserir um nome")
+        }      
+
+       //Crie uma funcao que receba um numero de 1 a 100
+       //e calcule em qual dezena ele está.
+
+       function CalcularDezena(numero){
+           if(numero < 1 || numero > 100){
+            return "Número fora do intervalo de 1 a 100"
+           }
+
+           //Math.floor - é utilizar para arredondar um número
+           //decimal para um numero inteiro. Ele remove a parte
+           //decimal do numero e retorna a parte inteira.
+
+            //33/10= 3*10 =30;
+           let dezena = Math.floor(numero/10)*10
+
+           //Switch para determinar a familia da dezena.
+
+           switch(dezena){
+            case dezena ==  10:
+                return "Família do 10 ou do 20"
+            case 20:
+                return "Família do 20"
+            case 30:
+                return "Família do 30"
+            case 40:
+                return "Família do 40"
+            case 50:
+                return "Família do 50"
+            case 60:
+                return "Família do 60"
+            case 70:
+                return "Família do 70"
+            case 80:
+                return "Família do 80"
+            case 90:
+                return "Família do 90"
+            default:
+                return "Número não pertence a uma família de dezenas"
+           }
+
+       }
+
+       let numeroUsuario = prompt("Informe um número entre 1 e 100")
+
+       console.log(CalcularDezena(numeroUsuario))
+
+
+
+
+
+
+      </script>
+
+
+
+</head>
+<body>
+
+
+</body>
+
+
+</html>
