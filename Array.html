@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <script>
+  
+        //Array é um tipo de dado que serva para armazenas valores 
+        //sequenciais em forma de lista.
+          
+        //vazio.
+        const array1= [];
+       
+        //strings
+        const array3= ["Lucas","Caio"];
+
+         //booleanos
+         const array4= [true,false,true];
+ 
+         //misto
+         const array5= [1,false,"Lucas"];
+
+
+        //numeros
+        const numeros= [1,2,3,4,5];  //indice inicia sempre em 0.
+
+        //acesso ao array
+        console.log(numeros[0]) //1
+        console.log(numeros[1]) //2
+ 
+        let resultado = numeros[0] + numeros[1]
+        console.log(resultado)
+
+    //Percorrer um array
+
+      console.log("Percorrer um array")
+
+     for(let index = 0; index < numeros.length; index++){
+        console.log(numeros[index])
+     }
+
+
+     //Carregar um array com entradas do Prompt
+      const listaNomes = [];
+      let quantidade = 5;
+    
+      do{
+            let entrada = prompt("Insira um nome")
+            listaNomes.push(entrada.toUpperCase()) //adicionando um nome no array
+            console.log(listaNomes.length) //quantidade de itens do array;
+      }
+      while(listaNomes.length < quantidade)
+
+
+      //Eliminar qualquer elemento
+
+     const nomes = ['LUCAS', 'JOAO', 'JUAN', 'CAROLINE', 'AKIRA']
+
+
+                  //arrow function
+     const eliminar = (nome) =>{
+            //buscar indice do array
+            let index = nomes.indexOf(nome)
+
+            //se o nome existir sera diferente de -1.
+            if(index != -1){
+                nomes.splice(index,1) //remove o nome a partir do index.
+                console.log(nomes)
+            }
+            else{
+                console.log("O nome " + nome + " não foi encontrado")
+            }
+     }
+
+     let nomeEmilinar = prompt("Qual nome deseja eliminar da lista?")
+     eliminar(nomeEmilinar)
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

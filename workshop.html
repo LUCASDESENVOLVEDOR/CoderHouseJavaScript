@@ -24,11 +24,11 @@
        if(numeroMes <  1 || numeroMes >12)
             console.log("Mês inválido")
 
-       if(mes >= 3 && mes <= 5)
+       if(numeroMes >= 3 && numeroMes <= 5)
           console.log("Primavera")
-       else if(mes >=6 && mes <= 8)
+       else if(numeroMes >=6 && numeroMes <= 8)
           console.log("Verão")
-       else if(mes >=9 && mes <= 11)
+       else if(numeroMes >=9 && numeroMes <= 11)
           console.log("Outono")
         else
           console.log("Inverno")
@@ -95,6 +95,141 @@
      }
      somatorio(5) //15
      
+    //6-(Cubo) Crie uma função que retorne o cubo de 
+    //um número fornecido pelo usuário.
+     function cubo(numero){
+          var resultado =  numero * numero * numero
+          return resultado
+     }
+
+     console.log(cubo(3))
+
+     //7-(Divisível) Crie uma funcionalidade que recebe dois
+     // números e verifica se o primeiro número é ou não divisível pelo segundo número.
+   
+     function ehDivisivel(numero1, numero2){
+          if(numero2 == 0){
+            console.log("Divisão por zero não é permitida.")
+          }
+          else if (numero1 % numero2 == 0){
+            console.log(numero1 + " é divisível por " + numero2 )
+          }
+          else{
+            console.log(numero1 + "não é divisível por " + numero2 )
+          }
+     }
+
+     ehDivisivel(10,5) //"10 é disivivel por 5"
+
+     //8 - (Mês) Receba um número do usuário. 
+     //Se este número estiver entre 1 e 12, deve exibir o nome do mês correspondente. 
+     //Se for digitado um número fora desta faixa, imprimir a mensagem: 
+     //“valor de mês incorreto”. Faça um loop até que o usuário digite 0.
+
+     const numeroMes = parseInt(prompt("Digite um número de 1 a 12 (ou 0 para sair):"));
+
+     do {
+   
+    switch (numeroMes) {
+        case 1:
+            alert("O mês correspondente ao número 1 é Janeiro");
+            break;
+        case 2:
+            alert("O mês correspondente ao número 2 é Fevereiro");
+            break;
+        case 3:
+            alert("O mês correspondente ao número 3 é Março");
+            break;
+        case 4:
+            alert("O mês correspondente ao número 4 é Abril");
+            break;
+        case 5:
+            alert("O mês correspondente ao número 5 é Maio");
+            break;
+        case 6:
+            alert("O mês correspondente ao número 6 é Junho");
+            break;
+        case 7:
+            alert("O mês correspondente ao número 7 é Julho");
+            break;
+        case 8:
+            alert("O mês correspondente ao número 8 é Agosto");
+            break;
+        case 9:
+            alert("O mês correspondente ao número 9 é Setembro");
+            break;
+        case 10:
+            alert("O mês correspondente ao número 10 é Outubro");
+            break;
+        case 11:
+            alert("O mês correspondente ao número 11 é Novembro");
+            break;
+        case 12:
+            alert("O mês correspondente ao número 12 é Dezembro");
+            break;
+        case 0:
+            alert("Saindo do programa.");
+            break;
+        default:
+            alert("Valor de mês incorreto. Digite um número de 1 a 12.");
+            break;
+    }
+} while (numeroMes !== 0);
+
+
+//9-(Potência) Faça um programa que peça dois números (base e expoente) 
+//calcule e mostre o primeiro número elevado ao segundo número.
+
+function calcularPotencia(base,expoente){
+     
+      //forma de resolver 1
+      //return  Math.pow(base,expoente)
+
+      if(expoente == 0)
+       return 1
+
+       let resultado = 1
+       for(let i = 0;  i < expoente; i++){
+         resultado = resultado * base         
+       }
+
+       return resultado;
+}
+
+console.log(calcularPotencia(2,3))  //Deve imprimir 8.
+
+//10-(Idade) Faça um sistema que receba o ano, mês e dia de nascimento de uma pessoa,
+// calcule e mostre a idade dessa pessoa em anos, meses e dias.
+
+function calcularIdade(anoNascimento, mesNascimento, diaNascimento) {
+    const dataAtual = new Date();
+    const anoAtual = dataAtual.getFullYear();
+    const mesAtual = dataAtual.getMonth() + 1;
+    const diaAtual = dataAtual.getDate();
+    
+    let anos = anoAtual - anoNascimento;
+    let meses = mesAtual - mesNascimento;
+    let dias = diaAtual - diaNascimento;
+    
+    if (dias < 0) {
+        meses--;
+        dias += 30; // Supondo que um mês tem 30 dias
+    }
+    
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    }
+    
+    return { anos: anos, meses: meses, dias: dias };
+}
+
+// Exemplo de uso:
+const idade = calcularIdade(1990, 5, 15);
+console.log("Idade: " + idade.anos + " anos, " + idade.meses + " meses e " + idade.dias + " dias");
+
+
+
 
     </script>
 
