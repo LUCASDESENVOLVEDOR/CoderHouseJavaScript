@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <script>
+
+          class Produto{
+               constructor(nome, preco){
+                   this.nome = nome.toUpperCase(),
+                   this.preco = parseFloat(preco),
+                   this.vendido = false;
+               }
+               somarICMS(){
+                  this.preco = this.preco *1.21
+               }
+          }
+
+          const produtos = []
+          produtos.push(new Produto("arroz","125"))
+          produtos.push(new Produto("macarrão","70"))
+          produtos.push(new Produto("pão","50"))
+
+          for (const produto of produtos){
+            produto.somarICMS();            
+          }
+
+          console.log(produtos)
+
+
+
+
+      //Atividade Extra
+      
+      let nomes = []
+      let nome
+
+      do{
+        nome  = prompt("Digite um nome (ou 'fim' para encerrrar)")
+
+        if(nome.toLowerCase() != "fim"){
+            nomes.push(nome)
+         }
+      }
+      while(nome.toLowerCase() != "fim")
+
+
+    console.log("Nomes inseridos")
+
+    for (const nome of nomes){
+        console.log(nome)
+    }
+
+
+
+        
+    </script>
+
+
+
+</head>
+
+
+
+</html>
