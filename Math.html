@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+  <script>
+
+        // Função para gerar um número aleatório entre 20 e 50
+        function numeroAleatorio(){       
+          return  Math.floor(Math.random() * 30) + 20
+        }
+
+        // Função para gerar um array com a quantidade de números aleatórios informada
+        function gerarArrayNumAleario(quantidade){
+            const numerosAleatorios = [];
+            for (let i = 0; i < quantidade; i++) {
+                numerosAleatorios.push(numeroAleatorio());
+            }
+            return numerosAleatorios;
+        }
+
+        // Função para calcular a raiz quadrada de todos os números em um array
+        function calcularRaizQuadradaArray(array) {
+        return array.map(numero => Math.sqrt(numero));
+        }
+
+       // Gerar um array com números aleatórios entre 20 e 50
+       const arrayAleatorio = gerarArrayNumAleario(10)// Neste exemplo, 
+                                                      //geraremos 10 números aleatórios.
+
+        // Calcular a raiz quadrada de cada número no array
+        const arrayRaizQuadrada = calcularRaizQuadradaArray(arrayAleatorio);
+                
+        // Exibir os dois arrays no console
+        console.log("Array de números aleatórios: ", arrayAleatorio);
+        console.log("Array com raiz quadrada dos números: ", arrayRaizQuadrada);
+
+  </script>
+
+
+
+</head>
+
+
+
+</html>
