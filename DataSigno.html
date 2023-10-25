@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <script>
+     // Defina a data de nascimento (dia, mês e ano) e o horário (hora e minutos)
+      const dataNascimento = new Date(1993,4,20,11,10)
+   
+    function descobrirSigno(dataNascimento){
+  
+        const dia = dataNascimento.getDate() //apenas o dia.
+        const mes = dataNascimento.getMonth() + 1 
+         // Os meses em JavaScript são baseados
+         // em zero, portanto, somamos 1.
+
+        const signos = [
+            { signo: "Áries", inicio: { mes: 3, dia: 21 }, fim: { mes: 4, dia: 20 } },
+            { signo: "Touro", inicio: { mes: 4, dia: 21 }, fim: { mes: 5, dia: 20 } },
+            { signo: "Gêmeos", inicio: { mes: 5, dia: 21 }, fim: { mes: 6, dia: 20 } },
+            { signo: "Câncer", inicio: { mes: 6, dia: 21 }, fim: { mes: 7, dia: 22 } },
+            { signo: "Leão", inicio: { mes: 7, dia: 23 }, fim: { mes: 8, dia: 22 } },
+            { signo: "Virgem", inicio: { mes: 8, dia: 23 }, fim: { mes: 9, dia: 22 } },
+            { signo: "Libra", inicio: { mes: 9, dia: 23 }, fim: { mes: 10, dia: 22 } },
+            { signo: "Escorpião", inicio: { mes: 10, dia: 23 }, fim: { mes: 11, dia: 21 } },
+            { signo: "Sagitário", inicio: { mes: 11, dia: 22 }, fim: { mes: 12, dia: 21 } },
+            { signo: "Capricórnio", inicio: { mes: 12, dia: 22 }, fim: { mes: 1, dia: 19 } },
+            { signo: "Aquário", inicio: { mes: 1, dia: 20 }, fim: { mes: 2, dia: 18 } },
+            { signo: "Peixes", inicio: { mes: 2, dia: 19 }, fim: { mes: 3, dia: 20 } }
+       ];
+
+
+       for (const signosInfo of signos){
+          
+             if ( (mes == signosInfo.inicio.mes && dia >= signosInfo.inicio.dia) ||
+               (mes == signosInfo.fim.mes  && dia <= signosInfo.fim.dia)){
+                  return signosInfo.signo
+               }
+         }
+         return "Signo desconhecido"
+    }
+
+    const signo = descobrirSigno(dataNascimento)
+
+    console.log(signo)
+
+
+    function exibirDataDeTresManeiras(data) {
+                // Formato padrão (Tue Dec 17 2024)
+                console.log(data.toDateString());
+
+                // Formato com a data e hora (17/12/2024, 00:00:00)
+                console.log(data.toLocaleString());
+
+                // Formato com a data (17/12/2024)
+                console.log(data.toLocaleDateString());
+      }
+
+// Vamos usar a data fictícia 19 de outubro de 1990 como exemplo
+const dataNascimento1 = new Date(1990, 9, 19); // Mês 9 representa outubro
+
+exibirDataDeTresManeiras(dataNascimento1);
+
+    const inicio = new Date()
+    for (let i = 0; i < 1000; i++) {
+       console.log("contando tempo")
+    }
+    const final = new Date()
+    console.log("O processo demorou: " + (final - inicio) + " milissegundos")
+
+
+    //Crie uma função que receba uma data de aniversário
+    //Calcule quantos dias falta para chegar esse aniversário
+
+   function calcularDiasAniversario(dataAniversario){
+
+    const dataAtual = new Date()
+
+    //20/05/1993  -->   20/05/2023
+    // Verifica se o aniversário já ocorreu no ano atual
+    dataAniversario.setFullYear(dataAtual.getFullYear());  //20/05/2023    
+
+     //20/05/2023  menor 24/10/2023
+    // Se o aniversário já passou no ano atual, ajusta o ano para o próximo ano
+    if (dataAniversario < dataAtual) {
+         dataAniversario.setFullYear(dataAtual.getFullYear() + 1); //20/05/2024
+    }
+
+    // Calcula a diferença em milissegundos
+     const diferencaEmMilissegundos = dataAniversario - dataAtual;
+
+    // Converte a diferença em milissegundos para dias
+    const diasFaltantes = Math.ceil(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+
+    return diasFaltantes
+   }
+
+    // Exemplo de uso: Vamos supor que o aniversário seja em 15 de maio.
+    const dataAniversario = new Date(2023, 9, 25); // Mês 4 representa maio
+                                    // (lembrando que os meses são baseados em zero).
+    const diasFaltantes = calcularDiasAniversario(dataAniversario);
+
+    console.log(diasFaltantes)
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+
+
+
+</html>

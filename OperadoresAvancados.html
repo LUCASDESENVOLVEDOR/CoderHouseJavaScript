@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+    <script>
+
+    //Operador Ternario
+   
+                //(SE)     (SENAO)
+        // condicao ? caso1 : caso2
+
+    let temperatura = 31
+
+    temperatura > 30 ? alert("Dia quente!") : alert("Dia Agradavel")
+
+    //Operador Logico And
+
+    const usuario = {
+        nome: "Maria",
+        idade: 15
+    }
+    //Gravar um registro de acesso SE a idade for maior que 18.
+
+    //se a condicao for TRUE devolve na DATA ATUAL, senao retorna FALSE.
+    const resgistroAcesso = usuario.idade >= 18 && new Date()
+    
+    console.log(resgistroAcesso)
+  
+
+   //Operador Logico OR
+   const carrinhoAnteior = ['Mouse','Teclado','Monitor']  
+   let carrinho = carrinhoAnteior || []   
+   console.log(carrinho)
+
+   //Acesso condicional a um objeto
+
+   let usuarioCurso = {
+                nome: "Maria",
+                idade: 16,
+                cursos: {
+                javascript: "aprovado"
+                }
+      }
+
+
+    console.log(usuarioCurso?.cursos?.javascript || "A propriedade não existe")
+    console.log(usuarioCurso?.trabalhos?.coderhouse || "A propriedade não existe")
+
+   //Desestruturação
+
+    const {nome, idade} = usuarioCurso
+
+    console.log(nome,idade)
+
+
+
+    //Desestruturação de Arrays
+
+    const nomes = ["Juan", "Julieta", "Carlos", "Mariela"]
+    const [a, b] = nomes
+    console.log(a) // "Juan"
+    console.log(b) // "Julieta"
+
+    const[ , , ,d] = nomes
+    console.log(d)
+
+
+        
+    </script>
+
+
+</head>
+
+
+
+
+</html>
