@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script>
+
+      //Algoritmo que solicita uma entrada ao usuario
+      //ate que ele insira a palavra sair.
+
+       let entrada = prompt("Inserir um dado")
+
+       while(entrada != "sair"){
+           alert("O usuario inseriu: " +entrada )
+           //solicitamos novamente um dados
+           entrada = prompt("Inserir um dado")
+
+       }
+
+       console.log("Atividade em sala")
+
+//receba um numero e calcular seu fatorial
+// o fatorial de um numero é o produto dele pelos seus 
+//antecessores maiores que zero.
+
+
+function calcularFatorial(numero){
+    
+    if(numero < 0){
+        return "Número negativo não possui fatorial."
+    }
+
+    if(numero == 0 || numero == 1){
+        return 1
+    }
+    else{
+    
+        let resultado = 1; //valor inicial do fatorial;
+        let i = 2; // começamos a multiplicar de 2;
+
+        //mantem o loop do codigo até a condicao for FALSE.
+        while(i <= numero){
+            resultado = resultado * i
+            i++
+            // i = i + 1
+        }
+
+        return resultado
+    }
+}
+console.log(calcularFatorial(4))
+
+
+
+
+    </script>
+</head>
+
+</html>

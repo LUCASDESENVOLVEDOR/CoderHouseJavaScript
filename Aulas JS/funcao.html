@@ -1,0 +1,89 @@
+<html>
+<head>
+    <script>
+
+    //     function solicitarNome(){
+
+    //         var nome = prompt("Inserir nome")
+    //         alert("O nome inserido é" + nome)
+    //     }
+
+    //     solicitarNome()
+    //     solicitarNome()
+    //     solicitarNome()
+
+    //    //Funcao Numero Par
+
+    //   function numeroPar(){
+
+    //    var numero = prompt("Insira um número")
+
+    //    //% modulo = resto da divisao
+    //    if(numero % 2 == 0){
+    //       alert("Esse número é par")
+    //    }
+    //    else{
+    //      alert("Esse npumero é impar")
+    //    }
+    // }
+
+    // numeroPar();
+    // numeroPar();
+    // numeroPar();
+
+     //Argumento e Parametro
+       
+     //Declaracao de variavel para armazenar o resultado da soma
+    var resultado = 0
+
+    function somar(primeiroNumero, segundoNumero){
+        resultado = primeiroNumero + segundoNumero
+    }
+
+    function mostrar(mensagem){
+        console.log(mensagem)
+    }
+
+     //chamamos primeiro para somar e depois para mostrar.      
+     somar(20,5)
+     mostrar(resultado)
+
+     //CALCULADORA
+
+     function calculadora(primeiroNumero,segundoNumero, operacao){
+
+              if(operacao == "+"){
+              return primeiroNumero + segundoNumero
+              }
+
+              if(operacao == "-"){
+              return primeiroNumero - segundoNumero
+              }
+
+              if(operacao == "*"){
+              return primeiroNumero * segundoNumero
+              }
+
+              if(operacao == "/"){
+              return primeiroNumero / segundoNumero
+              }
+              else{
+                return 0;
+              }
+           }
+
+
+           //var resultadoCalculadora = calculadora(30,10,"-")
+ 
+          // console.log(resultadoCalculadora)
+
+           console.log(calculadora(30,10,"-"))
+           console.log(calculadora(30,10,"+"))
+           console.log(calculadora(30,10,"/"))
+           console.log(calculadora(30,10,"*"))
+    </script>
+
+</head>
+
+
+</html>

@@ -1,0 +1,11 @@
+p {
+    color: blue;
+}
+
+p strong {
+    background-color: yellow;
+}
+
+.margin20 {
+    margin-top: 20 px;
+}

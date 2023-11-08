@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <script>
+  
+        //Array é um tipo de dado que serva para armazenas valores 
+        //sequenciais em forma de lista.
+          
+        //vazio.
+        const array1= [];
+       
+        //strings
+        const array3= ["Lucas","Caio"];
+
+         //booleanos
+         const array4= [true,false,true];
+ 
+         //misto
+         const array5= [1,false,"Lucas"];
+
+
+        //numeros
+        const numeros= [1,2,3,4,5];  //indice inicia sempre em 0.
+
+        //acesso ao array
+        console.log(numeros[0]) //1
+        console.log(numeros[1]) //2
+ 
+        let resultado = numeros[0] + numeros[1]
+        console.log(resultado)
+
+    //Percorrer um array
+
+      console.log("Percorrer um array")
+
+     for(let index = 0; index < numeros.length; index++){
+        console.log(numeros[index])
+     }
+
+
+     //Carregar um array com entradas do Prompt
+      const listaNomes = [];
+      let quantidade = 5;
+    
+      do{
+            let entrada = prompt("Insira um nome")
+            listaNomes.push(entrada.toUpperCase()) //adicionando um nome no array
+            console.log(listaNomes.length) //quantidade de itens do array;
+      }
+      while(listaNomes.length < quantidade)
+
+
+      //Eliminar qualquer elemento
+
+     const nomes = ['LUCAS', 'JOAO', 'JUAN', 'CAROLINE', 'AKIRA']
+
+
+                  //arrow function
+     const eliminar = (nome) =>{
+            //buscar indice do array
+            let index = nomes.indexOf(nome)
+
+            //se o nome existir sera diferente de -1.
+            if(index != -1){
+                nomes.splice(index,1) //remove o nome a partir do index.
+                console.log(nomes)
+            }
+            else{
+                console.log("O nome " + nome + " não foi encontrado")
+            }
+     }
+
+     let nomeEmilinar = prompt("Qual nome deseja eliminar da lista?")
+     eliminar(nomeEmilinar)
+
+
+   /*  Crie um array de cores e peça para o usuário preencher com 5 cores diferentes.
+        Usando o console.log, exiba o array completo e seu tamanho.
+        Das cores inseridas, peça ao usuário para eliminar uma delas.
+        Para cada cor presente no array, exiba a frase “Na posição {i} temos a cor {cor}”
+        Peça para o usuário inserir uma nova cor e verifique se a cor já existe no array, caso ela já exista, não faça nada. Caso ainda não exista, insira na primeira posição.
+*/
+    let cores = []
+
+    for(let i = 1; i <= 5; i++){
+        let cor = prompt("Digite a cor " + (i) + ":")
+        cores.push(cor)
+    }
+
+    console.log(cores)
+    console.log(cores.length)
+   
+    //peça para o usuario eleminar uma cor.
+    let corPraEliminar = prompt("Digite a cor que você deseja eliminar.")
+    let indiceParaEliminar = cores.indexOf(corPraEliminar)
+
+    if(indiceParaEliminar != -1)
+    {
+        cores.splice(indiceParaEliminar,1) 
+        console.log("A cor " + corPraEliminar + " foi removida.");
+    }
+    else{
+        console.log("A cor " + corPraEliminar + " não foi encontrada no array.");
+    }
+    //Exiba a posição de cada cor no array.
+     for(let i = 0; i < cores.length ; i++){
+        console.log("Na posição "+  i + " temos a cor " + cores[i])
+     }
+
+     let novaCor = prompt("Digite uma nova cor.")
+    
+     if(cores.indexOf(novaCor) == -1){
+        cores.unshift(novaCor)
+     }
+     else{
+        console.log("A cor " + novaCor + " já existe no array e não foi inserida.");
+     }
+
+    // Exiba o array atualizado
+    console.log("Array de cores atualizado:", cores);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

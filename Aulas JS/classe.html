@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+    <script>
+         class Produto{    //classe- base criar OBJETOS (Produtos)    
+                constructor(nome,preco){ //metodo que vai CONSTRUIR o OBJETO na memoria.
+                     this.nome = nome,
+                     this.preco = preco,
+                     this.vendido = false //todo produto criado inicia como FALSE.
+                }                 
+                somaICMS(){ //metodo
+                    this.preco = (this.preco * 1.21)
+                }
+                vender(){ //metodo
+                    this.vendido = true
+                }
+         }
+
+         const produto1 = new Produto("arroz",20)
+         const produto2 = new Produto("macarrão",50)
+
+        produto1.somaICMS()
+        produto2.somaICMS()
+        produto1.vender()
+
+        console.log(produto1)
+        console.log(produto2)
+
+      class Alimento{
+             constructor(nome, cor, peso, tipo){
+                this.nome = nome,
+                this.cor = cor,
+                this.peso= peso,
+                this.tipo = tipo
+             }
+
+      descrever(){
+          return "Este alimento é um " + this.tipo + " chamado " + this.nome + ", tem a cor " + 
+          this.cor + " e pesa " + this.peso + " gramas"
+         }
+      }
+
+
+      //Criando uma instância de fruta.
+      const fruta = new Alimento("Maça", "Vermelha",150,"fruta")
+
+      //Crianda uma instância de verdura.
+      const verdura = new Alimento("Espinafre", "Verde",50, "verdura")
+
+
+    //Exibindo as descricoes do alimentos.
+    console.log(fruta.descrever())
+    console.log(verdura.descrever())
+
+
+
+
+    </script>
+
+</head>
+
+
+</html>

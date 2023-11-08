@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script>
+
+     /*let xicara = {
+         cor: "branca",
+         forma: "redonda",
+         peso: 5,
+         capacidade: 10
+     }
+     console.log(xicara)*/
+
+     /*let fruta = {
+        nome: "Maça",
+        cor: "Vermelha",
+        peso:150,
+        tipo:"Fruta"
+     }
+
+
+     
+     
+     //alterando as propriedades utilizando anotacao de ponto.
+     fruta.nome = "Banana"
+     fruta.cor = "Amarela"
+
+     console.log(fruta.nome);
+     console.log(fruta.cor)
+
+
+     // alterando as proprietade utilizando anotacao de colchetes.
+     fruta["peso"] = 200 
+     fruta["tipo"] = "Fruta tropical"
+
+     console.log(fruta["peso"])
+     console.log(fruta["tipo"])
+
+     console.log(fruta)
+*/
+    //refatorando codigo com construtor new e this
+     function Fruta(nome, cor, peso,tipo){
+        this.nome = nome,
+        this.cor = cor,
+        this.peso = peso,
+        this.tipo = tipo
+     }     
+     const fruta = new Fruta("Maça","Vermelha",150,"fruta")
+
+     //fruta.nome tipo String
+     //String é um objeto que possui diversos métodos entre eles: toUpperCase(),toLocaleLowerCase()
+
+     //Exibir a quantidade de caracteres da propriedade nome
+     console.log("Quantidade de caracteres: " + fruta.nome.length) 
+
+     //Exibir a cor em maiuscula
+     console.log("Cor da fruta:" + fruta.cor.toUpperCase())
+
+     //Exibir tipo em minusculo
+     console.log("Tipo da fruta: " + fruta.tipo.toLowerCase())
+
+
+    //Percorrer as propriedades utilizando "in"
+    for (const propriedade in fruta){
+   
+         const nomeDaPropriedade = propriedade         
+         const valor = fruta[propriedade]
+         console.log(nomeDaPropriedade + " = " + valor)
+    }
+
+
+
+
+    </script>
+</head>
+
+
+
+</html>

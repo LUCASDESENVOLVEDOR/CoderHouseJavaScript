@@ -1,0 +1,86 @@
+<html>
+
+<head>
+   <script>
+//exibir numeros de 0 a 9.
+
+//inicio, condição, atualizacao.   
+ //i++ mesmo que i = i+1
+
+        console.log("Contar de 0 a 9")
+        for(let i = 0; i < 10; i++){
+            console.log(i)
+        }
+
+        console.log("Contar de 1 a 10:")
+
+        //contar de 1 a 10.
+        for(let i = 1; i <=10; i++){
+            console.log(i)
+        }
+
+
+//Tabuada.
+    console.log("Tabuada:")
+
+    //solicitamos um valor para o usuario.
+    let numero = parseInt(prompt("Insira um número:"))
+
+     //a cada repeticao, calculamos o numeros inserido vezes o numero
+     //da repeticao (i)
+
+     for(let i = 1; i <=10; i++){
+        let resultado = numero * i;
+        console.log(numero + " X " + i  + " = " + resultado)
+     }
+    
+    
+         console.log("Encontre o BUG:")
+
+        //Encontre o BUG
+        let numeroBUG = parseInt(prompt("Inserir número"));
+
+        //4 =  4X1 4X2 8X3 
+        //4 = 4X0  0X2  0X3 0X4  
+
+        function produtorio(numeroBUG) {
+            let resultado = 1
+            for (let i = 1; i <= numeroBUG; i++) {
+                resultado = resultado * i; // Multiplica resultado por i
+            }
+            console.log("Produtorio de " + numeroBUG + " = " + resultado);
+        }
+
+        produtorio(numeroBUG);
+
+
+    //Pratica em sala
+
+    console.log("Pratica em sala:")
+
+ 
+    let numeroMenor = parseInt(prompt("Inserir número para retornar menor"));
+    
+    exibirNumeroMenor(numeroMenor)
+
+    function exibirNumeroMenor(numero){
+
+        if(numero < 1 || numero > 10)
+        {
+            console.log("Número fora do intervalo de 1 a 10.")
+            return
+        }
+
+        for(let i = 1; i < numero; i++){
+            console.log(i)
+        }
+    }
+
+    
+
+
+   </script>
+
+</head>
+
+</html>

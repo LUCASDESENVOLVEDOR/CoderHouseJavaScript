@@ -1,0 +1,44 @@
+p {
+    color: green;
+}
+
+.bordasArredondadas{
+  border-radius: 67px;
+}
+
+#formRadios{
+    background-color: aqua;
+
+}
+.fundoAmarelo{
+    background-color: bisque;
+}
+
+.textoGrande{
+    font-size: 80px;
+}
+
+.textoRelativo{
+    font-size: 200%;
+}
+
+.comicSans{
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.centralizar
+{
+    text-align: center;
+}
+
+
+div {
+
+    background-color: blueviolet;
+    width: 400px; /*largura*/
+    height: 250px; /*altura*/
+
+
+}
