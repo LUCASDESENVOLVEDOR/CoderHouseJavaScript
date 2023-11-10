@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+</head>
+<body>
+  <h1>Carrinho de Compras</h1>
+
+  <div id="carrinho">
+    <!-- A lista de produtos será exibida aqui -->
+  </div>
+
+  <h2>Adicionar Produto</h2>
+  <form id="formularioProduto">
+    <label for="id">ID:</label>
+    <input type="text" id="id" required>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" required>
+
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" required>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" required>
+
+    <button type="button" onclick="adicionarProduto()">Adicionar ao Carrinho</button>
+  </form>
+
+  <script src="carrinho.js"></script>
+</body>
+</html>
