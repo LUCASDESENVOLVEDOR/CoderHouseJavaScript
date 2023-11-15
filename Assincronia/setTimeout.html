@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+  
+
+       console.log("Início")
+
+        const fim1 = setTimeout(() => {
+                  console.log("Fim")
+            }, 2000)
+            
+        clearTimeout(fim1)
+
+
+         //setTimeout( () => {  
+          //   console.log("Processo assíncrono")
+        //  },3000) //3 segundos.
+
+
+            console.log("1 - Início do processo")
+
+            setTimeout(() => {
+                   console.log("2 - Meio do processo")
+            }, 0)
+
+           console.log("3 - Fim do processo")
+
+
+
+         for (let letra of "olá") {
+
+             setTimeout(() => {
+                console.log(letra)
+             },100000)                
+         }
+
+        for (let letra of "mundo") {
+            setTimeout(() => {
+                console.log(letra)
+             },300000)              
+
+        }
+
+
+        let counter = 0
+        const interval = setInterval(() => {
+                counter++
+                console.log("Counter: ", counter)
+                if (counter >= 5) {
+                    clearInterval(interval)
+                    console.log("O intervalo foi removido")
+                }
+        }, 1000)
+
+        console.log("Início")
+
+        const fim = setTimeout(() => {
+                  console.log("Fim")
+            }, 2000)
+
+        clearTimeout(fim)
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+</body>
+
+
+
+</html>

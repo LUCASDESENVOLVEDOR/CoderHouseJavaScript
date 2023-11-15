@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- display: none;  TIRA A VISIBILIDADE 
+     display: block; ADICIONA A VISIBILIDADE-->
+<style>
+    .popup {                                                      
+        display: none;
+        width: 250px;
+        height: 50px;
+        position: absolute;
+        text-align: center;
+        vertical-align: middle;
+        background-color: burlywood;
+     }
+    .popup-active {
+    display: block;
+    }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+    <button id="botao">Clique Aqui</button>
+    <div id="popup" class="popup">
+       <p>Atenção! Site em manutenção</p>
+    </div>
+
+    <script>
+
+          const btn = document.getElementById('botao')
+          const popup = document.getElementById('popup')
+        
+          btn.addEventListener('click', () => {
+                    popup.classList.add('popup-active')
+                    setTimeout(() => {
+                            popup.classList.remove('popup-active')
+                    }, 5000)
+        })
+
+  </script>
+
+
+    </script>
+
+</body>
+
+
+
+</html>
