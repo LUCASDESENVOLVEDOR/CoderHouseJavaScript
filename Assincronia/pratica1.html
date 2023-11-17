@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            //BD é uma array que representa uma base de dados fictícia com
+            // informações sobre produtos e usuario. Cada produto é um objeto com propriedades como id, 
+            //nome e preco.
+             const BDProdutos = [
+                {id: 1, nome: 'Produto x', preco: 120},
+                {id: 2, nome: 'Produto y', preco: 200},
+                {id: 3, nome: 'Produto z', preco: 150}, 
+             ]
+
+             const BDUsuarios = [
+                {id: 101, nome: 'Lucas', idade: 25},
+                {id: 102, nome: 'Caio', idade: 30},
+                {id: 103, nome: 'Juan', idade: 28}, 
+             ]
+
+          const obterDadosAssincronos = () => {
+ 
+               return new Promise(  (resolve) =>{
+
+                    setTimeout( () => {
+                        const dados = {                        
+                            produtos: BDProdutos,
+                            usuarios: BDUsuarios                                        
+                        }
+                        resolve(dados)
+                    }, 3000) //resolvendo a Promise apos 3 segundos.
+                } )
+            }
+
+            obterDadosAssincronos()
+            .then((resposta) => {           
+                console.log('Dados obtidos com sucesso.')
+                console.log('Produtos', resposta.produtos)
+                console.log('Usuários', resposta.usuarios)
+            })
+            .catch((erro) =>{
+                console.log('Erro ao obter dados:', erro)
+            })
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+
+
+    </body>
+
+
+
+
+</html>
