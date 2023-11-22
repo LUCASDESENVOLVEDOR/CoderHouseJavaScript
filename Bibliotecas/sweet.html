@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+       <script>
+
+
+function  clicou(){
+
+
+    Swal.fire({
+            title: "Você quer realmente excluir?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Continuar",
+            denyButtonText: "Cancelar"
+        }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+
+            Swal.fire("Excluido com sucesso.!", "", "success");
+        } else if (result.isDenied) {
+            Swal.fire("Solicitação cancelada.", "", "info");
+        }
+        });
+
+}
+
+      </script>
+
+    </head>
+    <body>
+        <button id="botao" onclick="clicou()">Clique Aqui</button>
+
+
+        
+    </body>
+
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="
+        https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js
+        "></script>
+
+
+
+       <script>
+
+
+function  clicou(){
+
+    const DateTime = luxon.DateTime;
+
+    const dt = DateTime.local(2024, 1, 25, 12, 10)
+    console.log(dt.toString()) 
+
+    const dt1 = DateTime.fromISO("2025-05-25")
+    console.log(dt1.toLocaleString()) 
+    console.log(dt1.toLocaleString(DateTime.DATE_FULL)) 
+    console.log(dt1.toLocaleString(DateTime.TIME_SIMPLE)) 
+    console.log(dt1.setLocale('pt-br').toLocaleString(DateTime.DATE_FULL))
+
+
+   console.log(dt1.toLocaleString(DateTime.DATETIME_SHORT))
+    // 25/05/2025, 00:00
+    const soma = dt1.plus({ hours: 5, minutes: 15 })
+    
+    console.log(soma.toLocaleString(DateTime.DATETIME_SHORT))
+    // 25/05/2025, 05:15
+    const subtracao = dt1.minus({ month: 2, days: 10 })
+    console.log(subtracao.toLocaleString(DateTime.DATETIME_SHORT))
+    // 15/03/2025, 00:00
+
+
+
+
+
+}
+
+      </script>
+
+    </head>
+    <body>
+        <button id="botao" onclick="clicou()">Clique Aqui</button>
+
+
+        
+    </body>
+
+
+</html>
